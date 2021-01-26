@@ -699,6 +699,7 @@
   #define PROBE_SELECTED 1
 #endif
 
+// https://github.com/bigtreetech/BIGTREETECH-SKR-V1.3/issues/207#issuecomment-581084450
 #if HAS_BED_PROBE
   #if DISABLED(NOZZLE_AS_PROBE)
     #define HAS_PROBE_XY_OFFSET 1
