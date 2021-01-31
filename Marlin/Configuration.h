@@ -995,7 +995,7 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { -44, -14, -1 }
+#define NOZZLE_TO_PROBE_OFFSET { -44, -14, 0 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
@@ -1136,10 +1136,10 @@
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
 #define X_MIN_POS 0
-#define Y_MIN_POS 0
+#define Y_MIN_POS -6            // move nozzle home 6mm back, onto the bed
 #define Z_MIN_POS 0
-#define X_MAX_POS X_BED_SIZE
-#define Y_MAX_POS Y_BED_SIZE
+#define X_MAX_POS X_BED_SIZE+X_MIN_POS
+#define Y_MAX_POS Y_BED_SIZE+Y_MIN_POS
 #define Z_MAX_POS 250
 
 /**
@@ -1381,8 +1381,8 @@
 
 // Manually set the home position. Leave these undefined for automatic settings.
 // For DELTA this is the top-center of the Cartesian print volume.
-#define MANUAL_X_HOME_POS 0           // move nozzle right (neg dir) 0 mm
-#define MANUAL_Y_HOME_POS -5          // move plate forward (neg dir) 5 mm
+//#define MANUAL_X_HOME_POS 0           // disable - use X_MIN_POS
+//#define MANUAL_Y_HOME_POS -6          // disable - use Y_MIN_POS
 //#define MANUAL_Z_HOME_POS 0
 
 // Use "Z Safe Homing" to avoid homing with a Z probe outside the bed area.
