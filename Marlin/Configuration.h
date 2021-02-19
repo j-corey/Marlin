@@ -1131,12 +1131,12 @@
 // @section machine
 
 // The size of the print bed
-#define X_BED_SIZE 235
-#define Y_BED_SIZE 235
+#define X_BED_SIZE 230
+#define Y_BED_SIZE 225
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
 #define X_MIN_POS 0
-#define Y_MIN_POS -6            // move nozzle home 6mm back, onto the bed
+#define Y_MIN_POS -10            // move nozzle home 10mm back, onto the bed, past clips
 #define Z_MIN_POS 0
 #define X_MAX_POS X_BED_SIZE+X_MIN_POS
 #define Y_MAX_POS Y_BED_SIZE+Y_MIN_POS
