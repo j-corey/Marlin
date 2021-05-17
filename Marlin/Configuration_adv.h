@@ -1081,7 +1081,7 @@
   #if HAS_BED_PROBE
     #define PROBE_OFFSET_WIZARD         // was disabled
     #if ENABLED(PROBE_OFFSET_WIZARD)
-      #define PROBE_OFFSET_START -2.0   // Estimated nozzle-to-probe Z offset, plus a little extra
+      #define PROBE_OFFSET_START -2.5   // Estimated nozzle-to-probe Z offset, plus a little extra
     #endif
   #endif
 
@@ -1916,7 +1916,7 @@
 // For debug-echo: 128 bytes for the optimal speed.
 // Other output doesn't need to be that speedy.
 // :[0, 2, 4, 8, 16, 32, 64, 128, 256]
-#define TX_BUFFER_SIZE 0
+#define TX_BUFFER_SIZE 32       // was 0
 
 // Host Receive Buffer Size
 // Without XON/XOFF flow control (see SERIAL_XON_XOFF below) 32 bytes should be enough.
@@ -1960,7 +1960,7 @@
 //#define NO_TIMEOUTS 1000 // Milliseconds
 
 // Some clients will have this feature soon. This could make the NO_TIMEOUTS unnecessary.
-//#define ADVANCED_OK
+#define ADVANCED_OK       // was disabled; enable for troubleshooting
 
 // Printrun may have trouble receiving long strings all at once.
 // This option inserts short delays between lines of serial output.
