@@ -1081,7 +1081,7 @@
   #if HAS_BED_PROBE
     #define PROBE_OFFSET_WIZARD         // was disabled
     #if ENABLED(PROBE_OFFSET_WIZARD)
-      #define PROBE_OFFSET_START -2.5   // Estimated nozzle-to-probe Z offset, plus a little extra
+      #define PROBE_OFFSET_START -2.550 // Estimated nozzle-to-probe Z offset, plus a little extra
     #endif
   #endif
 
