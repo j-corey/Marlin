@@ -501,9 +501,13 @@
     //#define DEFAULT_Ki   1.54
     //#define DEFAULT_Kd  76.55
     // autotune 2021-01-24 205C (ambient 20C, bed 60C)
-    #define DEFAULT_Kp 21.1
-    #define DEFAULT_Ki 1.46
-    #define DEFAULT_Kd 76.2
+    //#define DEFAULT_Kp 21.1
+    //#define DEFAULT_Ki 1.46
+    //#define DEFAULT_Kd 76.2
+    // autotune 2021-05-31 215C (ambient 35C, metal hotend insert, enclosure)
+    #define DEFAULT_Kp 21.78
+    #define DEFAULT_Ki 1.65
+    #define DEFAULT_Kd 71.74
   #endif
 #endif // PIDTEMP
 
@@ -548,9 +552,13 @@
 
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
   // from 2021-01-24, Creality borosilicate glass bed, 90C (ambient about 20C)
-  #define DEFAULT_bedKp 174.9
-  #define DEFAULT_bedKi 34.08
-  #define DEFAULT_bedKd 598.1
+  //#define DEFAULT_bedKp 174.9
+  //#define DEFAULT_bedKi 34.08
+  //#define DEFAULT_bedKd 598.1
+  // autotune 2021-05-31, same as above, ambient 35C, with enclosure
+  #define DEFAULT_bedKp 144.34
+  #define DEFAULT_bedKi 28.08
+  #define DEFAULT_bedKd 494.64
 #endif // PIDTEMPBED
 
 #if EITHER(PIDTEMP, PIDTEMPBED)
